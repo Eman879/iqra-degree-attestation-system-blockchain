@@ -1,0 +1,20 @@
+{
+  "name": "degree-attestation-system",
+  "version": "1.0.0",
+  "description": "Iqra University Degree Attestation System",
+  "main": "server/src/index.js",
+  "scripts": {
+    "install:all": "npm install && npm install --prefix client && npm install --prefix server",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "seed": "npm run seed --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "qrcode": "^1.5.4"
+  }
+}
