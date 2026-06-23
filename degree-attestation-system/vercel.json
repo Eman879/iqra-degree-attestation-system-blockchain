@@ -19,8 +19,11 @@
       "dest": "degree-attestation-system/server/src/index.js"
     },
     {
+      "handle": "filesystem"
+    },
+    {
       "src": "/(.*)",
-      "dest": "degree-attestation-system/client/dist/$1"
+      "dest": "/index.html"
     }
   ]
 }
