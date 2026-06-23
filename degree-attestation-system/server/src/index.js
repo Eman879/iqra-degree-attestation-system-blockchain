@@ -27,7 +27,6 @@ app.get('/', (req, res) => {
     time: new Date()
   });
 });
-
 const startServer = async () => {
   await connectDB();
   await seedDB();
