@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "degree-attestation-system/client/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    },
+    {
+      "src": "degree-attestation-system/server/src/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "degree-attestation-system/server/src/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "degree-attestation-system/client/dist/$1"
+    }
+  ]
+}
